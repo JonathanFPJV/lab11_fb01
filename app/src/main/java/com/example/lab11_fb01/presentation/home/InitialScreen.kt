@@ -49,17 +49,20 @@ fun InitialScreen(navigateToLogin: () -> Unit = {}, navigateToSignUp: () -> Unit
         Image(
             painter = painterResource(id = R.drawable.storekeeperig),
             contentDescription = "",
-            modifier = Modifier.clip(CircleShape)
+            modifier = Modifier
+                .clip(CircleShape) // Aplica la forma circular primero
+                .background(Color.White) // Luego aplica el fondo blanco
+                .size(180.dp) // Ajusta el tamaño de la imagen según sea necesario
         )
         Spacer(modifier = Modifier.weight(1f))
         Text(
-            "Millions of songs.",
+            "Storekeeper",
             color = Color.White,
             fontSize = 38.sp,
             fontWeight = FontWeight.Bold
         )
         Text(
-            "Free on Spotify", color = Color.White, fontSize = 38.sp, fontWeight = FontWeight.Bold
+            "Probemos nuevo diseño.", color = Color.White, fontSize = 38.sp, fontWeight = FontWeight.Bold
         )
         Spacer(modifier = Modifier.weight(1f))
         Button(
