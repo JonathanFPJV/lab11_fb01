@@ -35,11 +35,10 @@ import com.example.lab11_fb01.ui.theme.ShapeButton
 import com.example.lab11_fb01.ui.theme.Black
 import com.example.lab11_fb01.ui.theme.Gray
 import com.example.lab11_fb01.ui.theme.Green
-import com.example.lab11_fb01.ui.theme.ShapeButton
 
 @Preview
 @Composable
-fun HomeScreen(navigateToLogin: () -> Unit = {}, navigateToSignUp: () -> Unit = {}) {
+fun InitialScreen(navigateToLogin: () -> Unit = {}, navigateToSignUp: () -> Unit = {}) {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -50,20 +49,17 @@ fun HomeScreen(navigateToLogin: () -> Unit = {}, navigateToSignUp: () -> Unit = 
         Image(
             painter = painterResource(id = R.drawable.storekeeperig),
             contentDescription = "",
-            modifier = Modifier
-                .clip(CircleShape) // Aplica la forma circular primero
-                .background(Color.White) // Luego aplica el fondo blanco
-                .size(180.dp) // Ajusta el tamaño de la imagen según sea necesario
+            modifier = Modifier.clip(CircleShape)
         )
         Spacer(modifier = Modifier.weight(1f))
         Text(
-            "Prueba de firebase.",
+            "Millions of songs.",
             color = Color.White,
             fontSize = 38.sp,
             fontWeight = FontWeight.Bold
         )
         Text(
-            "Probemos un nuevo diseño", color = Color.White, fontSize = 38.sp, fontWeight = FontWeight.Bold
+            "Free on Spotify", color = Color.White, fontSize = 38.sp, fontWeight = FontWeight.Bold
         )
         Spacer(modifier = Modifier.weight(1f))
         Button(
@@ -77,7 +73,6 @@ fun HomeScreen(navigateToLogin: () -> Unit = {}, navigateToSignUp: () -> Unit = 
             Text(text = "Sign up free", color = Black, fontWeight = FontWeight.Bold)
         }
         Spacer(modifier = Modifier.height(8.dp))
-
 
         Text(
             text = "Log In",
@@ -118,3 +113,5 @@ fun CustomButton(modifier: Modifier, painter: Painter, title: String) {
         )
     }
 }
+
+fun HomeScreen() {}
