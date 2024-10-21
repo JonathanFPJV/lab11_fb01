@@ -12,7 +12,7 @@ import com.google.firebase.auth.FirebaseAuth
 @Composable
 fun NavigationWrapper(
     navHostController: NavHostController,
-    auth: FirebaseAuth
+
 ) {
 
     NavHost(navController = navHostController, startDestination = "home") {
